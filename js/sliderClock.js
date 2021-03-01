@@ -36,7 +36,8 @@ function updateClock() {
     const time = new Date();
 
     // get h,m,s
-    const hours = time.getHours()%12;
+    hours = time.getHours()%12;
+	if(hours == 0){hours = 12;}
     
     const mins = time.getMinutes();
     const secs = time.getSeconds();
